@@ -4,8 +4,8 @@
  * Then find the next number whose sum of its digits returns double the previous one.
  */
 public class NextNumber {
-  public static void main(String[] args) {
-    int firstNumber = (int) (Math.random() * 100);
+    public static void main(String[] args) {
+        int firstNumber = (int) (Math.random() * 100);
 		int lastDigit = (firstNumber % 10);
 		int firstDigit = (firstNumber / 10);
 		int firstSum = firstDigit + lastDigit;
@@ -14,11 +14,9 @@ public class NextNumber {
 		System.out.println("First number: " + firstNumber);
 
 		firstSolution(firstNumber, firstDigit, lastDigit, firstSum, secondSum);
-  }
+    }
 
-  // TODO Create a second solution without loops
-  
-  static void firstSolution(int firstNumber, int firstDigit, int lastDigit, int firstSum, int secondSum) {
+    static void firstSolution(int firstNumber, int firstDigit, int lastDigit, int firstSum, int secondSum) {
 		int secondNumber = firstNumber + 1;
 
 		while (sum(secondNumber) < secondSum) {
@@ -37,6 +35,5 @@ public class NextNumber {
 		}
 
 		return sum;
-	}
-    
+	}    
 }
